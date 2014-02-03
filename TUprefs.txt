@@ -27,7 +27,7 @@ pref("browser.tabs.loadDivertedInBackground", false);
 pref("browser.tabs.loadInBackground", false);
 pref("browser.sessionstore.max_tabs_undo", 25);
 pref("browser.newtab.url", "about:newtab");
-pref("extensions.tabutils.singleWindowMode", true);
+pref("extensions.tabutils.singleWindowMode", false);
 pref("extensions.tabutils.openLinkInTab", false);
 pref("extensions.tabutils.openExternalInTab", false);
 pref("extensions.tabutils.openLinkWithHistory", false);
