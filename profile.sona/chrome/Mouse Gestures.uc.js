@@ -23,9 +23,18 @@ GESTURES:{
 	'R' :{name:'Forward',cmd:function(){document.getElementById("Browser:Forward").doCommand();}},
 	'D' :{name:'Close Tab',cmd:function(){document.getElementById("cmd_close").doCommand();}},
 	'DU':{name: "UndoCloseTab" ,cmd:function(){document.getElementById("History:UndoCloseTab").doCommand();}},
+	'UL':{name:'Left Tab',cmd:function(){gBrowser.mTabContainer.advanceSelectedTab(-1, true);}},
+	'UR':{name:'Right Tab',cmd:function(){gBrowser.mTabContainer.advanceSelectedTab(+1, true);}},
 	'LU':{name:'Top',cmd:function(){goDoCommand("cmd_scrollTop");}},
 	'LD':{name:'Bottom',cmd:function(){goDoCommand("cmd_scrollBottom");}},
 	'LR':{name:'Reload',cmd:function(){document.getElementById("Browser:Reload").doCommand();}},
+	'RU':{name:'Go up',cmd:function(){
+		var uri = gBrowser.currentURI;
+		if (uri.path == "/")return;
+		var pathList = uri.path.split("/");
+		if (!pathList.pop())pathList.pop();
+		loadURI(uri.prePath + pathList.join("/") + "/");
+	}},
 
 //	'RLR':{name:'Close All Tabs',cmd:function(){gBrowser.removeAllTabsBut(gBrowser.addTab("about:about"));}},
 //	'LU':{name:'History',cmd:function(){toggleSidebar("viewHistorySidebar");}},
@@ -40,7 +49,7 @@ GESTURES:{
 //	'DUD':{name:'Close of Save Session',cmd:function(){gPrefService.setBoolPref("browser.sessionstore.resume_session_once", true);goQuitApplication();}},
 //	'DUL':{name:'about:config',cmd:function(){openNewTabWith(delayedOpenTab("about:config"));}},
 //	'UL':{name:'FoxAge2ch',cmd:function(){if (document.getElementById("viewFoxAge2chSidebar"))toggleSidebar("viewFoxAge2chSidebar");else toggleSidebar("viewFoxage2chSidebar");}},
-	'UR':{name:'Clear Serchbar',cmd:function(){document.getElementById("searchbar").value = "";}},
+//	'UR':{name:'Clear Serchbar',cmd:function(){document.getElementById("searchbar").value = "";}},
 //	'DL':{name:'Writing Wizard',cmd:function(){ContextMenu2ch.write();}},
 //	'DLD':{name:'Delete Log',cmd:function(){ContextMenu2ch.deleteLog();}},
 //	'DLR':{name:'Open Log Folder',cmd:function(){ContextMenu2ch.openLogDir();}},

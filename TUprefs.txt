@@ -8,7 +8,7 @@ pref("extensions.tabutils.loadNewInBackground", false);
 pref("extensions.tabutils.loadDuplicateInBackground", false);
 pref("extensions.tabutils.loadAllInBackground", false);
 pref("extensions.tabutils.loadAllInForeground", false);
-pref("extensions.tabutils.openTabNext", 3);
+pref("extensions.tabutils.openTabNext", 1);
 pref("extensions.tabutils.openTabNext.keepOrder", true);
 pref("extensions.tabutils.openDuplicateNext", true);
 pref("extensions.tabutils.restoreOriginalPosition", true);
