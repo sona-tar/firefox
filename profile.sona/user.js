@@ -80,6 +80,9 @@ user_pref("browser.link.open_newwindow.restriction", 0);
 
 user_pref("browser.cache.memory.capacity", 65536);
 
+// diskキャッシュをオフにする
+user_pref("browser.cache.disk.enable" , false);
+
 // キャッシュの保存先を変更(RAMDISK上に置いてる Qsoft Enterprise Liteを使ってRAMDISKを作成
 
 // user_pref("browser.cache.disk.parent_directory","B:\\Temp");

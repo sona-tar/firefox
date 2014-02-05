@@ -104,56 +104,56 @@ var DragNGo = {
     {dir:'', modifier:'',name:'新しいタブでGoogle検索',obj:'text',cmd:function(self,event,info){self.searchWithEngine(info.texts, ['Google'], 'tab');}},
 
   /*=== リンク ===*/
-    {dir:'U', modifier:'',name:'xpi/jarインストール',obj:'xpi,jar',cmd:function(self,event,info){self.installXpi(info.urls);}},
+    //{dir:'U', modifier:'',name:'xpi/jarインストール',obj:'xpi,jar',cmd:function(self,event,info){self.installXpi(info.urls);}},
     {dir:'U', modifier:'',name:'リンクを新しいタブ前面に開く',obj:'link, textlink',cmd:function(self,event,info){self.openUrls(info.urls, 'tab', null);}},
-    //{dir:'D', modifier:'',name:'リンクを新しいタブ後面に開く',obj:'link, textlink',cmd:function(self,event,info){self.openUrls(info.urls, 'tabshifted', null);}},
-    {dir:'D', modifier:'',name:'リンクを新しいタブでaguse.jp検索',obj:'link, textlink',cmd:function(self,event,info){self.searchWithEngine(info.urls, ['aguse.jp'], 'tab');}},
-    {dir:'L', modifier:'',name:'リンクを現在のタブ開く',obj:'link, textlink',cmd:function(self,event,info){self.openUrls(info.urls, 'current', null);}},
+    {dir:'D', modifier:'',name:'リンクを新しいタブ後面に開く',obj:'link, textlink',cmd:function(self,event,info){self.openUrls(info.urls, 'tabshifted', null);}},
+    //{dir:'D', modifier:'',name:'リンクを新しいタブでaguse.jp検索',obj:'link, textlink',cmd:function(self,event,info){self.searchWithEngine(info.urls, ['aguse.jp'], 'tab');}},
+    //{dir:'L', modifier:'',name:'リンクを現在のタブ開く',obj:'link, textlink',cmd:function(self,event,info){self.openUrls(info.urls, 'current', null);}},
 
   /*=== 画像 ===*/
-    {dir:'U', modifier:'',name:'画像を新しいタブ前面に開く',obj:'image',cmd:function(self,event,info){self.openUrls(info.urls, 'tab', null);}},
-    {dir:'D', modifier:'',name:'画像を新しいタブ後面に開く',obj:'image',cmd:function(self,event,info){self.openUrls(info.urls, 'tabshifted', null);}},
-    {dir:'L', modifier:'',name:'画像を現在のタブに開く',obj:'image',cmd:function(self,event,info){self.openUrls(info.urls, 'current', null);}},
-    {dir:'LD', modifier:'',name:'Google 類似画像検索',obj:'image',cmd:function(self,event,info){var TargetImage=info.urls[0];var URL="http://www.google.com/searchbyimage?image_url="+TargetImage;if(TargetImage)gBrowser.loadOneTab(URL,null,null,null,false,false);}},
+    //{dir:'U', modifier:'',name:'画像を新しいタブ前面に開く',obj:'image',cmd:function(self,event,info){self.openUrls(info.urls, 'tab', null);}},
+    //{dir:'D', modifier:'',name:'画像を新しいタブ後面に開く',obj:'image',cmd:function(self,event,info){self.openUrls(info.urls, 'tabshifted', null);}},
+    //{dir:'L', modifier:'',name:'画像を現在のタブに開く',obj:'image',cmd:function(self,event,info){self.openUrls(info.urls, 'current', null);}},
+    //{dir:'LD', modifier:'',name:'Google 類似画像検索',obj:'image',cmd:function(self,event,info){var TargetImage=info.urls[0];var URL="http://www.google.com/searchbyimage?image_url="+TargetImage;if(TargetImage)gBrowser.loadOneTab(URL,null,null,null,false,false);}},
   /*=== Web Search ===*/
-    {dir:'R', modifier:'',name:'テキストをConQueryで検索',obj:'text',cmd:function(self,event,info){self.openConQueryPopup(event);}},
-    {dir:'UL', modifier:'',name:'テキストを現在のタブでgooウェブ検索(Green Label)',obj:'link, text',cmd:function(self,event,info){self.searchWithEngine(info.texts, ['gooウェブ検索(Green Label)'], 'current');}},
+    //{dir:'R', modifier:'',name:'テキストをConQueryで検索',obj:'text',cmd:function(self,event,info){self.openConQueryPopup(event);}},
+    //{dir:'UL', modifier:'',name:'テキストを現在のタブでgooウェブ検索(Green Label)',obj:'link, text',cmd:function(self,event,info){self.searchWithEngine(info.texts, ['gooウェブ検索(Green Label)'], 'current');}},
     {dir:'U', modifier:'',name:'テキストを新しいタブでGoogle検索',obj:'text',cmd:function(self,event,info){self.searchWithEngine(info.texts, ['Google'], 'tab');}},
     {dir:'D', modifier:'',name:'テキストを現在のタブでGoogle検索',obj:'text',cmd:function(self,event,info){self.searchWithEngine(info.texts, ['Google'], 'current');}},
-    {dir:'DL', modifier:'',name:'リンクテキストを新しいタブでGoogle検索',obj:'link',cmd:function(self,event,info){self.searchWithEngine(info.texts, ['Google'], 'tab');}},
-    {dir:'UL', modifier:'',name:'テキストを新しいタブでAmazon.com検索',obj:'link, text',cmd:function(self,event,info){self.searchWithEngine(info.texts, ['Amazon.com'], 'tab');}},
-    {dir:'UR', modifier:'',name:'テキストを新しいタブでYahoo! JAPAN検索',obj:'link, text',cmd:function(self,event,info){self.searchWithEngine(info.texts, ['Yahoo! JAPAN'], 'tab');}},
+    {dir:'L', modifier:'',name:'リンクテキストを新しいタブでGoogle検索',obj:'link',cmd:function(self,event,info){self.searchWithEngine(info.texts, ['Google'], 'tab');}},
+    //{dir:'UL', modifier:'',name:'テキストを新しいタブでAmazon.com検索',obj:'link, text',cmd:function(self,event,info){self.searchWithEngine(info.texts, ['Amazon.com'], 'tab');}},
+    //{dir:'UR', modifier:'',name:'テキストを新しいタブでYahoo! JAPAN検索',obj:'link, text',cmd:function(self,event,info){self.searchWithEngine(info.texts, ['Yahoo! JAPAN'], 'tab');}},
 
   /*=== ページ内検索 ===*/
-    {dir:'L', modifier:'',name:'テキストをページ内検索',obj:'link, text',cmd:function(self,event,info){self.findWord(info.texts[0]);}},
+    {dir:'R', modifier:'',name:'テキストをページ内検索',obj:'link, text',cmd:function(self,event,info){self.findWord(info.texts[0]);}},
 
   /*=== クリップボード ===*/
-    {dir:'UD', modifier:'',name:'リンクurl/テキストをクリップボードにコピー',obj:'text',cmd:function(self,event,info){Cc["@mozilla.org/widget/clipboardhelper;1"].getService(Ci.nsIClipboardHelper).copyString(info.texts[0]);}},
-    {dir:'LR', modifier:'',name:'リンクテキスト/テキストをクリップボードにコピー',obj:'link, text',cmd:function(self,event,info){Cc["@mozilla.org/widget/clipboardhelper;1"].getService(Ci.nsIClipboardHelper).copyString(info.texts[0]);}},
-    {dir:'UDU', modifier:'',name:'URLをクリップボードにコピー',obj:'link',cmd:function(self,event,info){Cc["@mozilla.org/widget/clipboardhelper;1"].getService(Ci.nsIClipboardHelper).copyString(info.urls[0]);}},
-    {dir:'DR', modifier:'',name:'テキストを検索バーにコピー',obj:'link, text',cmd:function(self,event,info){self.copyToSearchBar(info.texts[0].replace(/\n/mg,' '));}},
-    {dir:'DR', modifier:'ctrl',name:'テキストを検索バーに追加コピー',obj:'link, text',cmd:function(self,event,info){self.appendToSearchBar(info.texts[0].replace(/\n/mg,' '));}},
+    //{dir:'UD', modifier:'',name:'リンクurl/テキストをクリップボードにコピー',obj:'text',cmd:function(self,event,info){Cc["@mozilla.org/widget/clipboardhelper;1"].getService(Ci.nsIClipboardHelper).copyString(info.texts[0]);}},
+    //{dir:'LR', modifier:'',name:'リンクテキスト/テキストをクリップボードにコピー',obj:'link, text',cmd:function(self,event,info){Cc["@mozilla.org/widget/clipboardhelper;1"].getService(Ci.nsIClipboardHelper).copyString(info.texts[0]);}},
+    //{dir:'UDU', modifier:'',name:'URLをクリップボードにコピー',obj:'link',cmd:function(self,event,info){Cc["@mozilla.org/widget/clipboardhelper;1"].getService(Ci.nsIClipboardHelper).copyString(info.urls[0]);}},
+    //{dir:'DR', modifier:'',name:'テキストを検索バーにコピー',obj:'link, text',cmd:function(self,event,info){self.copyToSearchBar(info.texts[0].replace(/\n/mg,' '));}},
+    //{dir:'DR', modifier:'ctrl',name:'テキストを検索バーに追加コピー',obj:'link, text',cmd:function(self,event,info){self.appendToSearchBar(info.texts[0].replace(/\n/mg,' '));}},
 
   /*=== 保存 ===*/
-    {dir:'RU', modifier:'',name:'リンク/画像をSaveFileModoki(SF)で保存',obj:'image, link',cmd:function(self,event){self.openSaveFileModokiPopup(event);}},
+    //{dir:'RU', modifier:'',name:'リンク/画像をSaveFileModoki(SF)で保存',obj:'image, link',cmd:function(self,event){self.openSaveFileModokiPopup(event);}},
 /*
     {dir:'RD', modifier:'',name:'画像をD:/hogeに保存(SF)',obj:'image',cmd:function(self,event,info){if('saveFolderModoki' in window){saveFolderModoki.saveLink(info.urls[0], info.texts[0], 'D:\\hoge');}else{ self.saveLinkToLocal(info.urls[0],info.fname[0],'D:/hoge', true);}}},
     {dir:'RD', modifier:'',name:'リンクをD:/に保存(SF)',obj:'link',cmd:function(self,event,info){if('saveFolderModoki' in window){saveFolderModoki.saveLink(info.urls[0], info.texts[0], 'D:\\');}else{ self.saveLinkToLocal(info.urls[0],info.fname[0],'D:/', false);}}},
 */
-    {dir:'RD', modifier:'',name:'画像を名前を受けて保存'  ,obj:'image',cmd:function(self,event,info){self.saveAs(info.urls[0], info.fname[0], info.nodes[0].ownerDocument, info.nodes[0].ownerDocument);}},
-    {dir:'RD', modifier:'',name:'リンクを名前を受けて保存',obj:'link' ,cmd:function(self,event,info){self.saveAs(info.urls[0], info.fname[0], info.nodes[0].ownerDocument, info.nodes[0].ownerDocument);}},
+    //{dir:'RD', modifier:'',name:'画像を名前を受けて保存'  ,obj:'image',cmd:function(self,event,info){self.saveAs(info.urls[0], info.fname[0], info.nodes[0].ownerDocument, info.nodes[0].ownerDocument);}},
+    //{dir:'RD', modifier:'',name:'リンクを名前を受けて保存',obj:'link' ,cmd:function(self,event,info){self.saveAs(info.urls[0], info.fname[0], info.nodes[0].ownerDocument, info.nodes[0].ownerDocument);}},
 
   /*=== テキストをえでぃたーで開く ===*/
-    {dir:'DL', modifier:'',name:'テキストをエディターで開く',obj:'text',cmd:function(self,event,info){self.editText(null, info.texts[0]);}}, // 引数 null: view_source.editor.pathのエディターを使う
+    //{dir:'DL', modifier:'',name:'テキストをエディターで開く',obj:'text',cmd:function(self,event,info){self.editText(null, info.texts[0]);}}, // 引数 null: view_source.editor.pathのエディターを使う
 
 
   /*=== appPathをparamsで開く, paramsはtxtで置き換えcharsetに変換される ===*/
-    {dir:'U', modifier:'shift,ctrl',name:'リンクをInternet Explorerで開く',obj:'link',cmd:function(self,event,info){self.launch(info.urls[0], "C:\\Program Files\\Internet Explorer\\iexplore.exe",["%%URL%%"],"Shift_JIS");}},
-    {dir:'R', modifier:'shift,ctrl',name:'テキストをDDwinで開く',obj:'text',cmd:function(self,event,info){self.launch(info.texts[0], "c:\\Program Files\\DDwin\\ddwin.exe", [",2,,G1,%%SEL%%"], "Shift_JIS");}},
+    //{dir:'U', modifier:'shift,ctrl',name:'リンクをInternet Explorerで開く',obj:'link',cmd:function(self,event,info){self.launch(info.urls[0], "C:\\Program Files\\Internet Explorer\\iexplore.exe",["%%URL%%"],"Shift_JIS");}},
+    //{dir:'R', modifier:'shift,ctrl',name:'テキストをDDwinで開く',obj:'text',cmd:function(self,event,info){self.launch(info.texts[0], "c:\\Program Files\\DDwin\\ddwin.exe", [",2,,G1,%%SEL%%"], "Shift_JIS");}},
 
   /*=== Utility ===*/
-    {dir:'RDR', modifier:'',name:'Eijiro',obj:'text',cmd:function(){var TERM=getBrowserSelection().toString();var URL="http://eow.alc.co.jp/"+TERM+"/UTF-8/";if(TERM)gBrowser.loadOneTab(URL,null,null,null,false,false);}},
-    {dir:'RDRD', modifier:'',name:'Excite で英和',obj:'text', /*要popupTranslate.uc.xul*/
+    {dir:'R', modifier:'',name:'Eijiro',obj:'text',cmd:function(){var TERM=getBrowserSelection().toString();var URL="http://eow.alc.co.jp/"+TERM+"/UTF-8/";if(TERM)gBrowser.loadOneTab(URL,null,null,null,false,false);}},
+    {dir:'L', modifier:'',name:'Excite で英和',obj:'text', /*要popupTranslate.uc.xul*/
       cmd:function(self,event,info){
         var UI = Cc["@mozilla.org/intl/scriptableunicodeconverter"].
                  createInstance(Ci.nsIScriptableUnicodeConverter);
@@ -165,6 +165,7 @@ var DragNGo = {
           popupTranslate.getTranslateResult(text, engine, null);
       }
     },
+    /*
     {dir:'RLU', modifier:'',name:'選択テキスト(プロンプト)を指定ドメイン内で検索',obj:'link, text',
       cmd:function(self,event,info){
         var _document=document.commandDispatcher.focusedWindow.document;
@@ -175,6 +176,8 @@ var DragNGo = {
                                     ' '+encodeURIComponent(p);
       }
     },
+    */
+    /*
     {dir:'UDUD', modifier:'',name:'選択範囲をテキストファイルとして保存',obj:'text',
       cmd:function(self){
         // 選択範囲をテキストファイルとして保存する。
@@ -190,6 +193,7 @@ var DragNGo = {
         }
       }
     },
+   */
   ], // ~GESTURES
 
 
