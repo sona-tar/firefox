@@ -46,3 +46,15 @@
 #context_closeTab /* タブを閉じる */ {
 display: none!important;
 }
+
+/* リンクのコンテキストメニュー　削除*/
+#context-copylink, 
+#context-copyemail, 
+#context-sep-open,
+#context-openlinkprivate ,
+#context-bookmarklink, 
+/* #context-savelink, */
+#context-sendlink, 
+#context-sep-copylink {
+display: none!important;
+}

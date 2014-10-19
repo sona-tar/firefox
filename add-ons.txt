@@ -1,5 +1,0 @@
-uc
-https://addons.mozilla.org/ja/firefox/addon/uc/
-
-ithinc/tabutils
-https://github.com/ithinc/tabutils
